@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olumoroti David | UI/UX Designer & Web Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b0f19;
+        }
+        .glass {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-modal {
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+            transition: all 0.4s ease;
+        }
+        /* Hide scrollbars for cleaner layout look while maintaining native swiping layout stability */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-gray-200 overflow-x-hidden antialiased">
+
+    <!-- Ambient Background Blobs -->
+    <div class="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-indigo-600/10 rounded-full filter blur-[80px] md:blur-[120px] -z-10"></div>
+    <div class="absolute top-1/3 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-purple-600/10 rounded-full filter blur-[80px] md:blur-[120px] -z-10"></div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 w-full glass border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white">
+                DAVID OLUMOROTI<span class="text-indigo-500">.</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+            </nav>
+            <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 md:px-5 md:py-2.5 text-xs md:text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-all glow-effect">
+                Let's Talk
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-16 md:pt-32 md:pb-32 flex flex-col items-center text-center">
+        <span class="px-3 py-1 rounded-full text-[10px] md:text-xs font-semibold tracking-wider text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 uppercase mb-6">
+            Available for Freelance & Contracts
+        </span>
+        <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight max-w-4xl leading-tight md:leading-tight">
+            Crafting Digital Experiences Through <span class="text-gradient">Design & Code</span>
+        </h1>
+        <p class="mt-4 md:mt-6 text-sm sm:text-base md:text-xl text-gray-400 max-w-2xl font-light leading-relaxed">
+            Hi, I'm Olumoroti David. I bridge the gap between stunning graphic design and high-performance web development to build memorable digital products.
+        </p>
+        <div class="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto px-4 sm:px-0">
+            <a href="#portfolio" class="px-6 py-3.5 md:px-8 md:py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-100 transition-all text-center text-sm md:text-base">
+                View My Work
+            </a>
+            <a href="#contact" class="px-6 py-3.5 md:px-8 md:py-4 glass text-white font-semibold rounded-xl hover:bg-gray-800 transition-all text-center text-sm md:text-base border border-gray-700">
+                Contact Me
+            </a>
+        </div>
+    </section>
+
+    <!-- Expertise / Services Section -->
+    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 border-t border-gray-900">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-12">
+            <div>
+                <h2 class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-indigo-500 mb-1 md:mb-2">Core Expertise</h2>
+                <p class="text-2xl md:text-4xl font-bold text-white">What I Do Best</p>
+            </div>
+            <p class="text-gray-400 text-xs md:text-sm max-w-md mt-3 md:mt-0 leading-relaxed">
+                Delivering end-to-end digital solutions from conceptual brand identity to fully deployed web applications.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <!-- Service 1 -->
+            <div class="glass p-6 md:p-10 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-5 md:mb-6 text-lg md:text-xl">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">Web Design & Development</h3>
+                <p class="text-gray-400 leading-relaxed text-xs md:text-sm">
+                    Building responsive, fast-loading, and SEO-optimized websites. Transforming complex design layouts into clean, interactive frontend code using modern practices.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="glass p-6 md:p-10 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-5 md:mb-6 text-lg md:text-xl">
+                    <i class="fa-solid fa-bezier-curve"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">Graphic & Visual Design</h3>
+                <p class="text-gray-400 leading-relaxed text-xs md:text-sm">
+                    Creating compelling visual narratives, marketing assets, and brand identities. Specialized in high-impact typography, layout, and structured promotional materials.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 border-t border-gray-900">
+        <div class="mb-10 md:mb-12">
+            <h2 class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-indigo-500 mb-1 md:mb-2">Selected Work</h2>
+            <p class="text-2xl md:text-4xl font-bold text-white">Featured Projects</p>
+            <p class="text-gray-400 text-xs mt-2">Tap/click on any project card to view the case study gallery.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <!-- Project Card 1 -->
+            <div onclick="openProjectModal('project-web')" class="group relative overflow-hidden rounded-2xl border border-gray-800 glass cursor-pointer hover:border-indigo-500/50 transition-all duration-300">
+                <div class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-gray-900/80 border border-gray-700 flex items-center justify-center text-xs opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
+                    <i class="fa-solid fa-expand text-indigo-400"></i>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-indigo-900/40 to-slate-900 flex items-center justify-center p-6 border-b border-gray-800">
+                    <i class="fa-solid fa-globe text-5xl md:text-6xl text-indigo-500/20 group-hover:scale-105 transition-transform duration-300"></i>
+                </div>
+                <div class="p-5 md:p-6">
+                    <span class="text-[10px] font-semibold text-indigo-400 tracking-wider uppercase">Web Development / Portal Integration</span>
+                    <h3 class="text-lg md:text-xl font-bold text-white mt-1.5 mb-2 md:mb-3">Interactive Portal Platform</h3>
+                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-4">
+                        A robust, high-performance portal featuring seamless database configuration and responsive user interfaces optimized across all layout variants.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-gray-400">
+                        <span class="px-2 py-0.5 rounded bg-gray-900">HTML5</span>
+                        <span class="px-2 py-0.5 rounded bg-gray-900">Tailwind CSS</span>
+                        <span class="px-2 py-0.5 rounded bg-gray-900">Firebase</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div onclick="openProjectModal('project-design')" class="group relative overflow-hidden rounded-2xl border border-gray-800 glass cursor-pointer hover:border-purple-500/50 transition-all duration-300">
+                <div class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-gray-900/80 border border-gray-700 flex items-center justify-center text-xs opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
+                    <i class="fa-solid fa-expand text-purple-400"></i>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-purple-900/40 to-slate-900 flex items-center justify-center p-6 border-b border-gray-800">
+                    <i class="fa-solid fa-palette text-5xl md:text-6xl text-purple-500/20 group-hover:scale-105 transition-transform duration-300"></i>
+                </div>
+                <div class="p-5 md:p-6">
+                    <span class="text-[10px] font-semibold text-purple-400 tracking-wider uppercase">Brand Identity / Digital Design</span>
+                    <h3 class="text-lg md:text-xl font-bold text-white mt-1.5 mb-2 md:mb-3">Visual Brand System</h3>
+                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-4">
+                        Comprehensive corporate design layouts including structured operational media kits, promotional materials, and dynamic graphic compositions.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-gray-400">
+                        <span class="px-2 py-0.5 rounded bg-gray-900">Typography</span>
+                        <span class="px-2 py-0.5 rounded bg-gray-900">Layout Asset</span>
+                        <span class="px-2 py-0.5 rounded bg-gray-900">Vector Media</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DYNAMIC GLASS MODAL OVERLAY -->
+    <div id="projectModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-3 sm:p-6 bg-black/80 transition-opacity duration-300">
+        <!-- Close overlay trigger -->
+        <div class="absolute inset-0" onclick="closeProjectModal()"></div>
+        
+        <!-- Modal Body Container -->
+        <div class="glass-modal w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-2xl md:rounded-3xl p-5 md:p-10 shadow-2xl relative flex flex-col transform scale-95 opacity-0 transition-all duration-300 no-scrollbar" id="modalContent">
+            
+            <!-- Modal Header Content -->
+            <div class="flex items-start justify-between border-b border-gray-800 pb-4 mb-4 md:mb-6">
+                <div class="pr-4">
+                    <span id="modalMeta" class="text-[10px] md:text-xs font-semibold text-indigo-400 tracking-wider uppercase">Category</span>
+                    <h3 id="modalTitle" class="text-xl md:text-3xl font-bold text-white mt-1">Project Name</h3>
+                </div>
+                <button onclick="closeProjectModal()" class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-900/80 border border-gray-800 flex items-center justify-center hover:bg-gray-800 text-gray-400 hover:text-white transition-colors flex-shrink-0">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <!-- Project Description Paragraph -->
+            <p id="modalDescription" class="text-gray-400 text-xs md:text-base leading-relaxed mb-6 md:mb-8">
+                Detailed showcase project brief goes here.
+            </p>
+
+            <!-- 3 IMAGE GLASS SLOTS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <!-- Image Slot 1 -->
+                <div class="group relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 aspect-[4/3] flex items-center justify-center">
+                    <img id="1.png" src="" alt="Showcase Preview 1" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+                    <div class="text-center p-4 text-gray-700 z-0">
+                        <i class="fa-solid fa-image text-2xl mb-1 block"></i>
+                        <span class="text-[10px] font-mono">Image Asset 1</span>
+                    </div>
+                </div>
+                <!-- Image Slot 2 -->
+                <div class="group relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 aspect-[4/3] flex items-center justify-center">
+                    <img id="2.png" src="" alt="Showcase Preview 2" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+                    <div class="text-center p-4 text-gray-700 z-0">
+                        <i class="fa-solid fa-image text-2xl mb-1 block"></i>
+                        <span class="text-[10px] font-mono">Image Asset 2</span>
+                    </div>
+                </div>
+                <!-- Image Slot 3 -->
+                <div class="group relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 aspect-[4/3] flex items-center justify-center">
+                    <img id="3.png" src="" alt="Showcase Preview 3" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+                    <div class="text-center p-4 text-gray-700 z-0">
+                        <i class="fa-solid fa-image text-2xl mb-1 block"></i>
+                        <span class="text-[10px] font-mono">Image Asset 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tech Stack / Skills Section -->
+    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 border-t border-gray-900">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            <div>
+                <h2 class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-indigo-500 mb-1 md:mb-2">Capabilities</h2>
+                <p class="text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">Technical Toolkit</p>
+                <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                    A collection of utilities, tools, and environments I leverage to create pixel-perfect systems and media production designs.
+                </p>
+            </div>
+            
+            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+                <div class="glass p-4 md:p-5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                    <i class="fa-brands fa-html5 text-orange-500 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-medium text-white">HTML5 & CSS3</span>
+                </div>
+                <div class="glass p-4 md:p-5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                    <i class="fa-brands fa-js text-yellow-500 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-medium text-white">JavaScript</span>
+                </div>
+                <div class="glass p-4 md:p-5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                    <i class="fa-brands fa-php text-indigo-400 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-medium text-white">PHP Core</span>
+                </div>
+                <div class="glass p-4 md:p-5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                    <i class="fa-solid fa-database text-teal-400 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-medium text-white">Firebase / SQL</span>
+                </div>
+                <div class="glass p-4 md:p-5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                    <i class="fa-solid fa-compass-drafting text-purple-400 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-medium text-white">UI Layouts</span>
+                </div>
+                <div class="glass p-4 md:p-5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                    <i class="fa-solid fa-terminal text-emerald-400 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-medium text-white">Linux Environments</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 border-t border-gray-900">
+        <div class="glass rounded-3xl p-6 sm:p-10 md:p-16 border border-gray-800 relative overflow-hidden">
+            <div class="absolute bottom-0 right-0 w-64 h-64 md:w-80 md:h-80 bg-indigo-600/10 rounded-full filter blur-[60px] md:blur-[80px] -z-10"></div>
+            
+            <div class="max-w-2xl">
+                <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4 md:mb-6">
+                    Let's Build Something Brilliant Together
+                </h2>
+                <p class="text-gray-400 text-xs md:text-sm mb-6 md:mb-8 leading-relaxed">
+                    Have an upcoming web development project, corporate identity branding requirement, or visual production layout work? Drop me a message.
+                </p>
+                
+                <form class="space-y-4" action="#" method="POST" onsubmit="event.preventDefault();">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Your Name" class="w-full bg-gray-900/50 border border-gray-800 rounded-xl px-4 py-3.5 md:px-5 md:py-4 text-xs md:text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors" required>
+                        <input type="email" placeholder="Your Email" class="w-full bg-gray-900/50 border border-gray-800 rounded-xl px-4 py-3.5 md:px-5 md:py-4 text-xs md:text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors" required>
+                    </div>
+                    <textarea placeholder="Tell me about your project..." rows="4" class="w-full bg-gray-900/50 border border-gray-800 rounded-xl px-4 py-3.5 md:px-5 md:py-4 text-xs md:text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors" required></textarea>
+            <a href="https://wa.me/2349114941416?text=Hi%2C%20I%20have%20a%20question"
+   target="_blank" rel="noopener"
+   class="w-full sm:w-auto px-6 py-3.5 md:px-8 md:py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-xs md:text-sm rounded-xl transition-all glow-effect inline-block text-center">
+   Send Message <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+</a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-8 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] md:text-xs text-gray-500 text-center sm:text-left">
+        <p>&copy; 2026 Olumoroti David. All rights reserved.</p>
+        <div class="flex space-x-6">
+            <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-sm md:text-base"></i></a>
+            <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-sm md:text-base"></i></a>
+            <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-behance text-sm md:text-base"></i></a>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODAL COMPONENT JAVASCRIPT -->
+    <script>
+        // Project Database Source
+        const projectData = {
+            'project-web': {
+                title: 'Interactive Portal Platform',
+                meta: 'Web Development / Portal Integration',
+                description: 'A robust, high-performance web portal built with pixel-perfect modern styling interfaces, fluid animations, dynamic data integration architecture, and seamless cross-device screen responsiveness layout implementations.',
+                images: [
+                    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80', 
+                    'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80', 
+                    'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            'project-design': {
+                title: 'Visual Brand System',
+                meta: 'Brand Identity / Digital Design',
+                description: 'A comprehensive creative layout identity design system curated for visual media delivery. Focuses heavily on high-fidelity structured operational material layouts, balanced typography frameworks, and modern promotional web vectors.',
+                images: [
+                    'https://images.unsplash.com/photo-1561070791-26c113006238?auto=format&fit=crop&w=800&q=80', 
+                    'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80'
+                ]
+            }
+        };
+
+        const modal = document.getElementById('projectModal');
+        const modalContent = document.getElementById('modalContent');
+
+        function openProjectModal(projectId) {
+            const data = projectData[projectId];
+            if (!data) return;
+
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalMeta').innerText = data.meta;
+            document.getElementById('modalDescription').innerText = data.description;
+
+            for (let i = 1; i <= 3; i++) {
+                const imgEl = document.getElementById(`imgSlot${i}`);
+                if(data.images[i-1]) {
+                    imgEl.src = data.images[i-1];
+                    imgEl.style.opacity = '1';
+                } else {
+                    imgEl.style.opacity = '0';
+                }
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 50);
+
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeProjectModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 300);
+
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>
